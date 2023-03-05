@@ -1,0 +1,11 @@
+Model Information:
+* title:	Old chicago
+* source:	https://sketchfab.com/3d-models/old-chicago-25cf4f2a21ff44efaf4f13dc557fd83a
+* author:	Acronhym (https://sketchfab.com/Acronhym)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Old chicago" (https://sketchfab.com/3d-models/old-chicago-25cf4f2a21ff44efaf4f13dc557fd83a) by Acronhym (https://sketchfab.com/Acronhym) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
