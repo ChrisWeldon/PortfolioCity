@@ -2,3 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
+.background-fade {
+    background: rgb(233,209,183);
+    background: linear-gradient(0deg, rgba(233,209,183,1) 43%, rgba(255,248,228,0.510224158022584) 100%);
+}
+
+
