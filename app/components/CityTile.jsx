@@ -1,6 +1,8 @@
 import { useRef } from 'react'
 import { useFrame}  from '@react-three/fiber'
-import { useGLTF, useScroll } from '@react-three/drei'
+import { useGLTF } from '@react-three/drei'
+
+import useWindowScroll from '../hooks/useWindowScroll'
 
 const deg2rad = degrees => degrees * (Math.PI / 180);
 
@@ -10,14 +12,14 @@ export default function CityTile(props) {
 
     const group = useRef()
 
-    const scroll = useScroll()
+    const [ scrollPosition, range, curve, visible, page] = useWindowScroll();
 
     const starting_z=props.position[2]
 
     useFrame((state,delta) => {
         //console.log(camera.rotation
         //console.log(camera.position)
-        const a = scroll.range(0, 1)*30
+        const a = range(0, 2000)*30
         group.current.position.z = a+starting_z
     })
 

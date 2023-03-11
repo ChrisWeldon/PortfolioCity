@@ -1,15 +1,12 @@
-'use client'
+"use client"
 
 import './page.module.css'
 
-import { Suspense, useMemo} from 'react'
-import { Canvas, useThree }  from '@react-three/fiber'
-import { ScrollControls, SoftShadows, Scroll} from '@react-three/drei'
+import { Suspense, useMemo, useState, useEffect} from 'react'
 import { useControls } from "leva"
 
-import CityTile from './components/CityTile'
-import HemisphereLight from './components/HemisphereLight'
-import Sun from './components/Sun'
+import BackgroundScene from './components/BackgroundScene'
+import ScrollWindow from './components/ScrollWindow'
 
 
 
@@ -18,6 +15,7 @@ export default function Home() {
 
     const options = useMemo(() => {
         return {
+            backgroundSceneEnabled: true,
             softShadowsEnabled: true,
             size: { value: 52, min: 0, max: 100 },
             focus: { value: 0.03, min: 0, max: 2 },
@@ -35,73 +33,16 @@ export default function Home() {
         }
     }, [])
 
-    const { softShadowsEnabled, ...config } = useControls(options)
+    const { softShadowsEnabled, backgroundSceneEnabled, ...config } = useControls(options)
+
 
     return (
-        <main className='h-full background-fade'>
-            <Canvas shadows className="">
-                <Camera
-                    position={[config.camX, config.camY, config.camZ]}
-                    rotation={[config.camRotX, config.camRotY, config.camRotZ]}
-                />
-                {softShadowsEnabled && <SoftShadows 
-                                size={config.size}
-                                focus={config.focus}
-                                samples={config.samples}
-                            />}
-                <fog attach="fog" color="#E9D1B7" near={1} far={config.fogFar}/>
-                <HemisphereLight intensity={.1}/>
-                <Sun position={[config.lightX, 
-                    config.lightY,
-                    config.lightZ]} target-position={[0, 0, 0]} />
-
-                <ScrollControls pages={3} damping={0}>
-
-                  <CityTile
-                    position={[0, -2, 0]} 
-                    rotation={[0, 0, 0]}
-                  />
-                  <CityTile
-                    position={[0, -2, -9]} 
-                    rotation={[0, 0, 0]}
-                  />
-                  <CityTile
-                    position={[0, -2, -18]} 
-                    rotation={[0, 0, 0]}
-                  />
-                  <CityTile
-                    position={[0, -2, -27]} 
-                    rotation={[0, 0, 0]}
-                  />
-                  <Scroll html>
-                    <div className="flex flex-col items-center text-grass min-w-screen text-2xl">
-                        <div className="min-h-screen">
-                            <h1>Scroll Down</h1>
-                        </div>
-                        <div className="min-h-screen"></div>
-                        <div className="min-h-screen">
-                            <h1>I&apos;m Gay</h1>
-                        </div>
-                    </div>
-                  </Scroll>
-                {/*<axesHelper args={[100]}/>*/}
-               </ScrollControls>
-            </Canvas>
+        <main className=''>
+            {backgroundSceneEnabled ? <BackgroundScene
+                config={config}
+                softShadowsEnabled={softShadowsEnabled}/>: <></>}
+            <ScrollWindow/>
         </main>
-    )
-}
-
-
-function Camera(props){
-    const camera = useThree(state=>state.camera)
-
-    camera.rotation.set(...props.rotation)
-    camera.position.set(...props.position)
-    //camera.scale.set(.6,.6,6)
-
-    return(
-        <>
-        </>
     )
 }
 

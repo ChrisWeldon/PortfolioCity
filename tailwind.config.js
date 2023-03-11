@@ -10,6 +10,9 @@ module.exports = {
         colors: {
             "peach":"#E9D1B7",
             "grass":"#8E7F4A"
+        },
+        fontFamily: {
+            sans: ['var(--font-poiretone)']
         }
     },
   },
