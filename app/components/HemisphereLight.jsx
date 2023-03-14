@@ -8,8 +8,9 @@ export default function HemisphereLight(props){
 
     return (
         <hemisphereLight 
-            skyColor={"#E9D1B7"}
-            groundColor={"#8E7F4A"}
-            intensity={.1}/>
+            {...props}
+            skyColor={"#0000FF"}
+            groundColor={"#fcb603"}
+            intensity={.2}/>
     )
 }

@@ -25,3 +25,26 @@
   mask: var(--mask);
 }
 
+
+@variants group-hover, hover, focus {
+    .notebook-input{
+        background: rgb(255,128,109);
+        background: linear-gradient(144deg, rgba(255,128,109,0.8323530095632002) 35%, rgba(255,239,0,0) 65%);
+        background-size: 200% 100%;
+        background-repeat: no-repeat;
+    }
+
+    .notebook-unfocused {
+        background-position: 150% 0%;
+    }
+    
+    .notebook-hover {
+        background-position: 50% 0%;
+    }
+
+    .notebook-focused {
+        background-position: 0% 0%;
+    }
+}
+
+

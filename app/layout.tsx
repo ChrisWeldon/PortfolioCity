@@ -23,7 +23,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={`${poiretOne.variable} font-sans`}>
-      <body className='background-fade font-sans'>{children}</body>
+      <body className='max-h-screen background-fade font-sans'>{children}</body>
     </html>
   )
 }
