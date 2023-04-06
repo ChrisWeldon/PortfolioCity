@@ -45,6 +45,25 @@
     .notebook-focused {
         background-position: 0% 0%;
     }
+
+    .project-input{
+        background: rgb(255,128,109);
+        background: linear-gradient(234deg, rgba(255,128,109,0.8323530095632002) 35%, rgba(255,239,0,0) 65%);
+        background-size: 200% 100%;
+        background-repeat: no-repeat;
+    }
+
+    .project-unfocused {
+        background-position: -50% 0%;
+    }
+    
+    .project-hover {
+        background-position: 50% 0%;
+    }
+
+    .project-focused {
+        background-position: 100% 0%;
+    }
 }
 
 

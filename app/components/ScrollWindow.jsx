@@ -1,6 +1,11 @@
 
 import useWindowScroll from '../hooks/useWindowScroll'
 import NavBar from './NavBar'
+import About from './page-windows/About';
+import Projects from './page-windows/Projects.jsx';
+import ProjectLink from './ProjectLink'
+
+import Footer from '@/components/Footer'
 
 export default function ScrollWindow(props){
 
@@ -27,37 +32,28 @@ export default function ScrollWindow(props){
                             sm:text-6xl
                             mx-3
                         '>Christopher W. Evans</span>
-                        <span className='text-3xl'>Software Engineer</span>   
+                        <span className='text-3xl'>Portfolio</span>   
                     </div>
                 </div>
             </div>
             <div className={`
                 mx-3 md:w-9/12 sm:mr-3 md:mr-8 xl:w-6/12
-                
+                space-y-12          
                 `}>
-                <div id="About" className={`min-h-screen flex flex-col
-                    transition-all my-9  
-                    items-center w-full`
-                }> 
-                        <h1>{scrollPosition} </h1>
-                        <p className=''>    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                        <p className=''>    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                </div>
+                <About />
+                <Projects />
 
-                <div id="Projects" className='min-h-screen flex flex-col bg-blue'>
-                    <div className={`transition-all my-8 flex flex-col 
-                        items-center w-full`} > 
-                        <p className=''>    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                        <p className=''>    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                    </div>
-                </div>
+
                 <div id="Resume" className='min-h-screen flex flex-col bg-blue'>
+                    <h1 className="text-6xl">Résumé</h1>
                     <div className={`transition-all my-8 flex flex-col 
                         items-center w-full`} > 
                         <p className=''>    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
                         <p className=''>    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
                     </div>
                 </div>
+                <Footer className={"w-full"}/>
+                
             </div>
         </div>
     </div>
