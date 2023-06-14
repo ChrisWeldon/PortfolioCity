@@ -1,4 +1,5 @@
 import { useRef } from 'react'
+
 import { useFrame}  from '@react-three/fiber'
 import { useGLTF } from '@react-three/drei'
 
@@ -22,6 +23,8 @@ export default function CityTile(props) {
         const a = range(0, 2000)*30
         group.current.position.z = a+starting_z
     })
+
+
 
     return (
         <group castShadow receiveShadow ref={group} {...props} 

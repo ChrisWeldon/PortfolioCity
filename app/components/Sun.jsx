@@ -1,6 +1,11 @@
 
 import { useRef } from 'react'
 
+import resolveConfig from 'tailwindcss/resolveConfig'
+import tailwindConfig from '../../tailwind.config.js'
+
+const fullConfig = resolveConfig(tailwindConfig)
+
 export default function Sun(props){
     const light = useRef()
 
@@ -12,7 +17,7 @@ export default function Sun(props){
             {...props}
             ref={light}
             intensity={0.5}
-            color={"#E9D1B7"}
+            color={fullConfig.theme.colors.morningsun}
             castShadow
             shadow-mapSize-width={1536}
             shadow-mapSize-height={1536}

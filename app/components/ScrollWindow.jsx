@@ -6,6 +6,7 @@ import Projects from './page-windows/Projects.jsx';
 import ProjectLink from './ProjectLink'
 
 import Footer from '@/components/Footer'
+import Headshot from '@/components/page-windows/Headshot'
 
 export default function ScrollWindow(props){
 

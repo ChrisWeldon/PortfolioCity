@@ -2,7 +2,7 @@
 import { useRef } from 'react'
 import { useFrame}  from '@react-three/fiber'
 import { useGLTF } from '@react-three/drei'
-import { MathUtils, Vector3 } from 'three'
+import { MathUtils, Vector3, MeshPhysicalMaterial } from 'three'
 
 import useWindowScroll from '../hooks/useWindowScroll'
 
@@ -43,7 +43,7 @@ export default function GrantTile(props) {
                 scale={[.01, .01, .01]}
                 rotation={[0, 0, 0]}
                 geometry={nodes.city.geometry}
-                material={materials.material_0}
+                material={new MeshPhysicalMaterial()}
             />
         </group>
     )
