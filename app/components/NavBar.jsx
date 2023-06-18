@@ -1,8 +1,14 @@
 import HoverLink from './HoverLink'
+import SubNavBar from './SubNavBar'
+
+import useWindowScroll from '../hooks/useWindowScroll'
 
 export default function NavBar(props){
 
-    const { subtitle, visible } = props 
+    const [ scrollPosition, range, curve, page] = useWindowScroll();
+
+    // TODO offload this to the hook so it controls itself
+    const { subtitle, visible  } = props 
 
     return (
         <div className="invisible md:visible transition-all
@@ -15,7 +21,7 @@ export default function NavBar(props){
                 2xl:text-6xl
                 opacity-0 -translate-x-2
                 ${visible ? 'translate-x-0 opacity-100': ''}`}>
-                Chris Evans
+                Chris Evans 
             </h3>
             <div className={`transition-all delay-300 mt-1 flex flex-col pr-4
                     ${visible ?  'border-black border-r': ''}
@@ -33,6 +39,7 @@ export default function NavBar(props){
                     <HoverLink href="#Projects">
                         Projects
                     </HoverLink>
+                    <SubNavBar expand={scrollPosition>1000}/>
                 </div>
                 <div className={`transition-all delay-200 -translate-x-2
                     opacity-0 ${visible ?  'opacity-100 translate-x-0': ''}

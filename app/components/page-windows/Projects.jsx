@@ -1,21 +1,21 @@
 import ProjectLink from '@/components/ProjectLink'
-import ProjectAnkiWebApp from '@/projects/ProjectAnkiWebApp'
-import ProjectAnkiCLI from '@/projects/ProjectAnkiCLI'
-import ProjectGarminWatchface from '@/projects/ProjectGarminWatchface'
-import ProjectCityScroller from '@/projects/ProjectCityScroller'
+import DescAnkiWebApp from '@/projects/DescAnkiWebApp'
+import DescAnkiCLI from '@/projects/DescAnkiCLI'
+import DescGarminWatchface from '@/projects/DescGarminWatchface'
+import DescCityScroller from '@/projects/DescCityScroller'
 
 export default function Projects(props){
     return (
         <div id="Projects" className='
             min-h-screen flex flex-col
-            space-y-12
+            space-y-24
         '>
-            <h1 className="text-6xl">Projects</h1>
+            <h1 className="text-6xl text-center font-extrabold ">Projects</h1>
 
-            <ProjectAnkiWebApp id="AnkiWeb"/>
-            <ProjectAnkiCLI id="AnkiCLI"/>
-            <ProjectGarminWatchface id="GarminWatchface"/>
-            <ProjectCityScroller id="CityScroller"/>
+            <DescAnkiWebApp id="AnkiLangWeb"/>
+            <DescAnkiCLI id="AnkiLangCLI"/>
+            <DescGarminWatchface id="GarminWatchface"/>
+            <DescCityScroller id="CityScroller"/>
             
         </div>
     )

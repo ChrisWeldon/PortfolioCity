@@ -28,7 +28,7 @@ export default function Home() {
             {backgroundSceneEnabled ? <BackgroundScene
                 config={config}
                 softShadowsEnabled={softshadow}/>: <></>}
-            <ScrollWindow/>
+            <ScrollWindow />
         </main>
     )
 }
