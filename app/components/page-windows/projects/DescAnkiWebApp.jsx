@@ -19,7 +19,7 @@ export default function DescAnkiWebApp(props){
                 </p>
                 <div className={'my-2 flex flex-row space-x-2'}>
                     <Image
-                        src="/projects/ankitool/ankitool_addingcard.png"
+                        src="/projects/ankiweb/ankiweb_newdeck.png"
                         className='rounded'
                         alt="picture of chris jumping in front of zurich"
                         objectfit='cover'
@@ -27,7 +27,7 @@ export default function DescAnkiWebApp(props){
                         height={300}
                     />
                     <Image
-                        src="/projects/ankitool/ankitool_finisheddingcards.png"
+                        src="/projects/ankiweb/ankiweb_addcard.png"
                         className='rounded'
                         alt="picture of chris jumping in front of zurich"
                         objectfit='cover'

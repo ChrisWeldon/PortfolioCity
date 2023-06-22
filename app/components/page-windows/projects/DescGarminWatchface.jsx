@@ -14,7 +14,7 @@ export default function DescGarminWatchface(props){
                 Garmin Daylight and 24bit Colors
             </h1>
             <div className="pl-6">
-                <p className="text-lg leading-tight">The Daylight Minimalist Watchface was built on the Garmin <span className="italic font-bold">Venu</span> platform in <span className="italic font-bold">Monkey-C</span> alongside the 24bit Colors Library. The watchface was built to provide athletes an at-a-glance view of vitals while remaining uncluttered and beautiful, and also to showcase the uses of the 24bit colors library.</p>
+                <p className="text-lg leading-tight">The Daylight Minimalist Watchface was built on the Garmin <span className="italic font-bold">Venu</span> platform in <span className="italic font-bold">Monkey-C</span> alongside my 24bit Colors Library. The watchface was built to provide athletes an at-a-glance view of vitals while remaining uncluttered and beautiful, and also to showcase the uses of my 24bit colors library.</p>
 
                 <div className={'my-2 flex flex-row space-x-2'}>
                     <Image
@@ -22,24 +22,32 @@ export default function DescGarminWatchface(props){
                         className='rounded-lg'
                         alt="picture of chris jumping in front of zurich"
                         objectfit='cover'
-                        width={107}
-                        height={165}
+                        width={150}
+                        height={185}
                     />
                     <Image
                         src="/projects/garminwatchface/watchface_intro.png"
                         className='rounded-lg'
                         alt="picture of chris jumping in front of zurich"
                         objectfit='cover'
-                        width={107}
-                        height={165}
+                        width={150}
+                        height={185}
+                    />
+                    <Image
+                        src="/projects/garminwatchface/watchface_sunset.png"
+                        className='rounded-lg'
+                        alt="picture of chris jumping in front of zurich"
+                        objectfit='cover'
+                        width={150}
+                        height={185}
                     />
                     <Image
                         src="/projects/garminwatchface/watchface_midnight.png"
                         className='rounded-lg'
                         alt="picture of chris jumping in front of zurich"
                         objectfit='cover'
-                        width={107}
-                        height={165}
+                        width={150}
+                        height={185}
                     />
                 </div>
             </div>

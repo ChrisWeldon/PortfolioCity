@@ -2,7 +2,7 @@
 import { useRef } from 'react'
 import { useFrame}  from '@react-three/fiber'
 import { useGLTF } from '@react-three/drei'
-import { MathUtils, Vector3, MeshPhysicalMaterial } from 'three'
+import { MathUtils, Vector3, MeshPhysicalMaterial, MeshDepthMaterial, Color} from 'three'
 
 import useWindowScroll from '../hooks/useWindowScroll'
 
@@ -21,6 +21,9 @@ export default function GrantTile(props) {
     const starting_z=props.position[2]
 
     loc.set(...props.position)
+
+    let material = new MeshPhysicalMaterial();
+    material.color = new Color(0xffc87e)
 
     useFrame((state,delta) => {
         //console.log(camera.rotation
@@ -43,7 +46,7 @@ export default function GrantTile(props) {
                 scale={[.01, .01, .01]}
                 rotation={[0, 0, 0]}
                 geometry={nodes.city.geometry}
-                material={new MeshPhysicalMaterial()}
+                material={ material }
             />
         </group>
     )

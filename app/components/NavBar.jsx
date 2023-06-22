@@ -44,8 +44,8 @@ export default function NavBar(props){
                 <div className={`transition-all delay-200 -translate-x-2
                     opacity-0 ${visible ?  'opacity-100 translate-x-0': ''}
                     `}>
-                    <HoverLink href="#Resume">
-                        Resume
+                    <HoverLink href="#Contact">
+                        Contact
                     </HoverLink>
                 </div>
             </div>

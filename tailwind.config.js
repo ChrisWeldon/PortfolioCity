@@ -13,6 +13,10 @@ module.exports = {
             "morningorange": "#ffc87e",
             "morningsun": "#fffddc",
             "grass": "#8E7F4A",
+            "blush": "#D65780",
+            "giantsorange": "#FF521B",
+            "cordovan": "#8C4843",
+            "periwinkle":"#DAC4F7"
         },
         fontFamily: {
             sans: ['var(--font-poiretone)']
