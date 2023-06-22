@@ -29,14 +29,14 @@ export default function NavBar(props){
                 <div className={`transition-all delay-100 -translate-x-2
                     opacity-0 ${visible ?  'opacity-100 translate-x-0': ''}
                     `}>
-                    <HoverLink href="#About">
+                    <HoverLink className={"2xl:text-4xl"} href="#About">
                         About
                     </HoverLink>
                 </div>
                 <div className={`transition-all delay-150 -translate-x-2
                     opacity-0 ${visible ?  'opacity-100 translate-x-0': ''}
                     `}>
-                    <HoverLink href="#Projects">
+                    <HoverLink className={"2xl:text-4xl"} href="#Projects">
                         Projects
                     </HoverLink>
                     <SubNavBar expand={scrollPosition>1000}/>
@@ -44,7 +44,7 @@ export default function NavBar(props){
                 <div className={`transition-all delay-200 -translate-x-2
                     opacity-0 ${visible ?  'opacity-100 translate-x-0': ''}
                     `}>
-                    <HoverLink href="#Contact">
+                    <HoverLink className={"2xl:text-4xl"} href="#Contact">
                         Contact
                     </HoverLink>
                 </div>

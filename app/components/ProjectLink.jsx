@@ -15,10 +15,13 @@ export default function ProjectLink(props){
                 w-fit
                 pr-2
                 ">
-                <a href={props.href} >{props.children}</a>
+                <a href={props.href} >{props.children}
+                </a>
             </div>
             <div className="relative grow overflow-x-hidden">
                 <a className="
+                    invisible
+                    md:visible
                     text-base
                     transition-all
                     delay-100

@@ -9,10 +9,15 @@ export default function Headshot(props){
     return (
         <div className='w-full h-fit my-5'>
             <div id="Headshot" className={`
-                flex flex-row space-x-6 mb-2 h-64
+                flex flex-row space-x-1 md:space-x-6 mb-2
                 justify-center
+                h-fit
                 `} >
-                <div className='overflow-hidden h-64 w-40 rounded-xl'>
+                <div className='overflow-hidden
+                    h-64 w-0 md:w-40
+                    lg:w-48 lg:h-76
+                    xl:w-60 xl:h-96
+                    rounded-xl'>
                     <div className={`
                         h-full w-full scale-125
                         transition-all
@@ -29,7 +34,11 @@ export default function Headshot(props){
                         />
                     </div>
                 </div>
-                <div className='overflow-hidden h-64 w-40 rounded-xl'>
+                <div className='overflow-hidden 
+                    h-64 w-0 md:w-40 
+                    lg:w-48 lg:h-76
+                    xl:w-60 xl:h-96
+                    rounded-xl'>
                     <div className={`
                         h-full w-full scale-150
                         transition-all
@@ -47,7 +56,11 @@ export default function Headshot(props){
                         />
                     </div>
                 </div>
-                <div className='overflow-hidden h-64 w-40 rounded-xl'>
+                <div className='overflow-hidden
+                    h-[32rem] md:h-64 w-3/5 md:w-40 
+                    lg:w-48 lg:h-76
+                    xl:w-60 xl:h-96
+                    rounded-xl'>
                     <div className={`
                         h-full w-full scale-150
                         transition-all

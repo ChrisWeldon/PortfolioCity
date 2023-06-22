@@ -20,7 +20,7 @@ export default function ScrollWindow(props){
         <div className="fixed flex flex-col top-36 left-12 text-3xl">
             <NavBar debug={debug} visible={scrollPosition>500} />
         </div>
-        <div className="flex flex-col items-center md:max-xl:items-end">
+        <div className="flex flex-col items-center md:max-xl:items-end max-w-full">
             <div id="Home" className='h-screen flex self-center flex-col'>
                 <div className={`
                      sticky top-1/3 flex  flex-row items-end justify-center
@@ -53,7 +53,7 @@ export default function ScrollWindow(props){
                         w-full`} > 
                     <ul>
                         <li className="text-2xl"> <h1> <span className="font-bold">Email:</span> cwevans (at) umass (dot) edu</h1> </li>
-                        <li className="text-2xl"> <h1> <span className="font-bold">Linkedin</span> <ProjectLink href="https://www.linkedin.com/in/chrisweldonevans/"> chrisweldonevans</ProjectLink></h1> </li>
+                        <li className="text-2xl"> <h1> <span className="font-bold">Linkedin:</span> <ProjectLink href="https://www.linkedin.com/in/chrisweldonevans/"> chrisweldonevans</ProjectLink></h1> </li>
 
                     </ul>
                     

@@ -9,7 +9,6 @@ export default function HoverLink(props){
             hover:border-black
             active:notebook-focused
 
-            2xl:text-4xl
             ${props.className}
             `}>
             <a href={props.href} >{props.children}</a>

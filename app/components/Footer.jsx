@@ -7,7 +7,10 @@ export default function Footer(props){
             h-10
             ${props.className}
         `}>
-        &copy; 2023 Christoper Evans
+        <div>
+        <div className="italic"> Thanks to <a href="https://bgrant.site/" className="underline">Ben Grant</a> for the city GSLB model.</div>
+        <div>&copy; 2023 Christopher Evans</div>
+        </div>
             
         </div>
     )

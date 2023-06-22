@@ -17,23 +17,25 @@ export default function DescAnkiWebApp(props){
                 <p className="text-lg leading-tight"> 
                     The webapp successor to AnkiCLI, allowing users to more effectively create and maintain their Anki language vocabulary decks. Written in <span className='font-bold italic'>Javascript</span> using <span className='font-bold italic'>NextJS</span> and integrates with Anki&apos;s opensource card software.
                 </p>
-                <div className={'my-2 flex flex-row space-x-2'}>
+                <div className={'my-2 flex flex-col md:flex-row space-x-2 '}>
+                    <div className='h-64 w-96 relative '>
                     <Image
                         src="/projects/ankiweb/ankiweb_newdeck.png"
                         className='rounded'
                         alt="picture of chris jumping in front of zurich"
-                        objectfit='cover'
-                        width={350}
-                        height={300}
+                        objectFit='cover'
+                        fill={true}
                     />
+                    </div>
+                    <div className='h-64 w-96 relative '>
                     <Image
                         src="/projects/ankiweb/ankiweb_addcard.png"
                         className='rounded'
                         alt="picture of chris jumping in front of zurich"
-                        objectfit='cover'
-                        width={350}
-                        height={300}
+                        objectFit='cover'
+                        fill={true}
                     />
+                    </div>
                 </div>
             </div>
             <div className="pl-6">

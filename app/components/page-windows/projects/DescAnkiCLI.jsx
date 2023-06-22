@@ -18,23 +18,25 @@ export default function DescAnkiCLI(props){
                 <p className="text-lg leading-tight"> 
                     A command line interface written in <span className="italic font-semibold">Javascript</span>  to help language learners generate large vocab decks on the fly for Anki Spaced Repetition software.
                 </p>
-                <div className={'my-2 flex flex-row space-x-2'}>
+                <div className={'my-2 flex flex-col md:flex-row md:space-x-2 '}>
+                    <div className='h-44 w-96 relative '>
                     <Image
                         src="/projects/ankitool/ankitool_addingcard.png"
                         className='rounded'
                         alt="picture of chris jumping in front of zurich"
-                        objectfit='cover'
-                        width={350}
-                        height={300}
+                        objectFit='cover'
+                        fill={true}
                     />
+                    </div>
+                    <div className='h-44 w-96 relative '>
                     <Image
                         src="/projects/ankitool/ankitool_finisheddingcards.png"
                         className='rounded'
                         alt="picture of chris jumping in front of zurich"
-                        objectfit='cover'
-                        width={350}
-                        height={300}
+                        objectFit='cover'
+                        fill={true}
                     />
+                    </div>
                 </div>
             </div>
             <div className="pl-6">

@@ -24,16 +24,12 @@ const fullConfig = resolveConfig(tailwindConfig)
 
 export default function BackgroundScene(props){
 
-    const { config, softShadowsEnabled } = props
-    
-
     return (
             <div className="fixed z-0 top-0 left-0 w-screen h-screen">
                 <Canvas shadows className="">
-                    <Stats/>
                     <axesHelper args={[4]}/>
                    
-                    <Objects sceneVisible={config.sceneVisible} softshadow={config.softshadow}/>
+                    <Objects />
                     <HemisphereLight position={[-10, 10, 10]}/>
                     <Sun position={[-3, 18, -6]} target-position={[0, 0, 0]} />
 
@@ -44,14 +40,14 @@ export default function BackgroundScene(props){
 
 
                     <Camera
-                        position={[-3.4, config.pos_y, 0]}
-                        rotation={[config.rot_x, config.rot_y, config.rot_z]}
+                        position={[-3.4, 1.60, 0]}
+                        rotation={[0.01, 1.13, 0.0]}
                     />
                 </Canvas> 
             </div>
     )
 }
-
+// TODO implement better
 function Bloom(props){
 
     return ( 
@@ -74,17 +70,17 @@ function Objects(props){
 
     const { active, progress, errors, item, loaded, total } = useProgress()
 
-    useFrame((state, delta) =>{
-        if(sceneVisible){
-            fog.current.far = MathUtils.lerp(fog.current.far, 16, 0.1)
-        }else{
-            fog.current.far = MathUtils.lerp(fog.current.far, 0, 0.025)
-        }
-    }) 
+    //useFrame((state, delta) =>{
+        //if(sceneVisible){
+            //fog.current.far = MathUtils.lerp(fog.current.far, 16, 0.1)
+        //}else{
+            //fog.current.far = MathUtils.lerp(fog.current.far, 0, 0.025)
+        //}
+    //}) 
     
     return (
         <>
-        { true ? <fog ref={fog} attach="fog" color={fullConfig.theme.colors.morningorange} near={0} far={500}/> : <></>}
+        <fog ref={fog} attach="fog" color={fullConfig.theme.colors.morningorange} near={0} far={16}/> 
         <group>
             <SoftShadows 
                 size={52}
