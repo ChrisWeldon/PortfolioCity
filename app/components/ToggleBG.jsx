@@ -1,10 +1,12 @@
 
 
 export default function ToggleBG(props){
-    const {bgEnabled, setBgEnabled} = props
+    const { className, bgEnabled, setBgEnabled} = props
 
     return (
-        <label className="h-6 text-sm space-x-2 flex flex-row p-2 items-center">
+        <label className={
+            `h-6 text-sm space-x-2 flex flex-row p-2 items-center ${className}`
+        }>
             <input 
                 name="toggle-background"
                 type="checkbox"
@@ -19,7 +21,7 @@ export default function ToggleBG(props){
             ">
                 
             </input>
-            <span> Enable Background </span>
+            <span> Disable Background </span>
         </label>
     )
 }

@@ -50,7 +50,7 @@ export default function NavBar(props){
                     </HoverLink>
                 </div>
             </div>
-            <ToggleBG setBgEnabled={setBgEnabled} bgEnabled={bgEnabled} />
+            <ToggleBG className={visible ? "": "invisible"} setBgEnabled={setBgEnabled} bgEnabled={bgEnabled} />
             <h3 className="text-2xl">{subtitle}</h3>
         </div>
     )

@@ -33,7 +33,7 @@ export default function Home() {
     return (
         <main className='max-w-screen-sm'>
             
-            { bgEnabled ? <BackgroundScene/> : <></>}
+            { bgEnabled ? <></>:<BackgroundScene/>}
             <ScrollWindow
              bgEnabled={bgEnabled}
              setBgEnabled={setBgEnabled}
