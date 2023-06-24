@@ -1,5 +1,6 @@
 import HoverLink from './HoverLink'
 import SubNavBar from './SubNavBar'
+import ToggleBG from './ToggleBG'
 
 import useWindowScroll from '../hooks/useWindowScroll'
 
@@ -8,7 +9,7 @@ export default function NavBar(props){
     const [ scrollPosition, range, curve, page] = useWindowScroll();
 
     // TODO offload this to the hook so it controls itself
-    const { subtitle, visible  } = props 
+    const { subtitle, visible, setBgEnabled, bgEnabled } = props 
 
     return (
         <div className="invisible md:visible transition-all
@@ -29,26 +30,27 @@ export default function NavBar(props){
                 <div className={`transition-all delay-100 -translate-x-2
                     opacity-0 ${visible ?  'opacity-100 translate-x-0': ''}
                     `}>
-                    <HoverLink className={"2xl:text-4xl"} href="#About">
+                    <HoverLink visible={visible} className={"2xl:text-4xl"} href="#About">
                         About
                     </HoverLink>
                 </div>
                 <div className={`transition-all delay-150 -translate-x-2
                     opacity-0 ${visible ?  'opacity-100 translate-x-0': ''}
                     `}>
-                    <HoverLink className={"2xl:text-4xl"} href="#Projects">
+                    <HoverLink visible={visible} className={"2xl:text-4xl"} href="#Projects">
                         Projects
                     </HoverLink>
-                    <SubNavBar expand={scrollPosition>1000}/>
+                    <SubNavBar visible={visible} expand={scrollPosition>1000}/>
                 </div>
                 <div className={`transition-all delay-200 -translate-x-2
                     opacity-0 ${visible ?  'opacity-100 translate-x-0': ''}
                     `}>
-                    <HoverLink className={"2xl:text-4xl"} href="#Contact">
+                    <HoverLink visible={visible} className={"2xl:text-4xl"} href="#Contact">
                         Contact
                     </HoverLink>
                 </div>
             </div>
+            <ToggleBG setBgEnabled={setBgEnabled} bgEnabled={bgEnabled} />
             <h3 className="text-2xl">{subtitle}</h3>
         </div>
     )

@@ -57,7 +57,7 @@ export default function Headshot(props){
                     </div>
                 </div>
                 <div className='overflow-hidden
-                    h-[32rem] md:h-64 w-3/5 md:w-40 
+                    h-[28rem] md:h-64 w-4/5 md:w-40 
                     lg:w-48 lg:h-76
                     xl:w-60 xl:h-96
                     rounded-xl'>

@@ -18,7 +18,7 @@ export default function ScrollWindow(props){
     return (
         <div className="absolute z-10">
         <div className="fixed flex flex-col top-36 left-12 text-3xl">
-            <NavBar debug={debug} visible={scrollPosition>500} />
+            <NavBar debug={debug} visible={scrollPosition>500} {...props}/>
         </div>
         <div className="flex flex-col items-center md:max-xl:items-end max-w-full">
             <div id="Home" className='h-screen flex self-center flex-col'>

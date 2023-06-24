@@ -2,7 +2,7 @@
 
 import { useEffect, useState, useRef, useDeferredValue } from 'react'
 import { Canvas, useThree, useFrame, extend }  from '@react-three/fiber'
-import { MeshPhysicalMaterial } from 'three'
+import { MeshPhysicalMaterial  } from 'three'
 import { SoftShadows, PerspectiveCamera, Stats,
     OrbitControls, useProgress } from '@react-three/drei'
 
@@ -26,7 +26,7 @@ export default function BackgroundScene(props){
 
     return (
             <div className="fixed z-0 top-0 left-0 w-screen h-screen">
-                <Canvas shadows className="">
+                <Canvas shadows className="w-screen h-screen">
                     <axesHelper args={[4]}/>
                    
                     <Objects />
@@ -181,6 +181,8 @@ function Camera(props){
     camera.position.set(...props.position)
     //camera.scale.set(.6,.6,6)
     //
+    
+
 
     return(
         <PerspectiveCamera makeDefault >

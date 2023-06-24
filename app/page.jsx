@@ -28,12 +28,16 @@ export default function Home() {
     //const { softshadow, backgroundSceneEnabled, ...config } = useControls(def_options)
     //const { softshadow, backgroundSceneEnabled, ...config } = def_options
 
+    const [bgEnabled, setBgEnabled] = useState(false)
 
     return (
         <main className='max-w-screen-sm'>
             
-            <BackgroundScene/>
-            <ScrollWindow/>
+            { bgEnabled ? <BackgroundScene/> : <></>}
+            <ScrollWindow
+             bgEnabled={bgEnabled}
+             setBgEnabled={setBgEnabled}
+            />
         </main>
     )
 }

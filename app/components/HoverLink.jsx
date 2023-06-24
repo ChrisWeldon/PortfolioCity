@@ -1,5 +1,6 @@
 
 export default function HoverLink(props){
+    const { visible } = props;
 
     return(
         <div className={` px-2
@@ -8,10 +9,9 @@ export default function HoverLink(props){
             border-l border-transparent 
             hover:border-black
             active:notebook-focused
-
             ${props.className}
             `}>
-            <a href={props.href} >{props.children}</a>
+            {visible ? <a href={props.href}> {props.children}</a> : <></>}
         </div>
     )
 }
