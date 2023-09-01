@@ -17,12 +17,12 @@ The main goal of this project was to combine the aesthetically pleasing view of 
 
 ![menu_closed](https://raw.githubusercontent.com/ChrisWeldon/PortfolioCity/main/public/projects/portfoliocity/menu_closed.png)
 
-![menu_open](https://raw.githubusercontent.com/ChrisWeldon/PortfolioCity/main/public/projects/portfoliocity/menu_open.png)
+![menu_open](https://raw.githubusercontent.com/ChrisWeldon/PortfolioCity/main/public/projects/portfoliocity/menu_expanded.png)
 
 #### Custom Webhook for tying together DOM scroll and ThreeJS perspective.
 The drei scroll hook works well, but had significant limitations when overlaying the whole page. A significant rewrite was required to get it to work
 
-![scrollhook_definition](https://raw.githubusercontent.com/ChrisWeldon/PortfolioCity/main/public/projects/portfoliocity/scrollhook_definition.png)
+![scrollhook_definition](https://raw.githubusercontent.com/ChrisWeldon/PortfolioCity/main/public/projects/portfoliocity/scrollhook_definiton.png)
 
 ![scrollhook_window](https://raw.githubusercontent.com/ChrisWeldon/PortfolioCity/main/public/projects/portfoliocity/scrollhook_window.png)
 
