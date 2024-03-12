@@ -77,7 +77,7 @@ function Objects(props){
             //fog.current.far = MathUtils.lerp(fog.current.far, 0, 0.025)
         //}
     //}) 
-    
+    //
     return (
         <>
         <fog ref={fog} attach="fog" color={fullConfig.theme.colors.morningorange} near={0} far={16}/> 

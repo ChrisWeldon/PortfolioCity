@@ -1,4 +1,3 @@
-
 import useWindowScroll from '../hooks/useWindowScroll'
 import NavBar from './NavBar'
 import About from './page-windows/About';
