@@ -1,9 +1,9 @@
 import './globals.css'
-import localFont from '@next/font/local'
+import localFont from 'next/font/local'
 
 export const metadata = {
   title: 'chriswevans.com',
-  description: "Chris' super cool website.",
+  description: "Chris' super cool website."
 }
 
 const poiretOne = localFont({
