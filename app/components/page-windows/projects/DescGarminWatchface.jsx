@@ -19,36 +19,36 @@ export default function DescGarminWatchface(props){
                 <div className={'my-2 flex max-w-full flex-wrap md:flex-row space-x-2 '}>
                     <div className='h-64 w-32 relative '>
                     <Image
-                        src="/projects/garminwatchface/watchface_intro.png"
+                        src="/projects/garminwatchface/Watchface_Intro.png"
                         className='rounded'
-                        alt="picture of chris jumping in front of zurich"
+                        alt="Garmin Intro Watch"
                         objectFit='cover'
                         fill={true}
                     />
                     </div>
                     <div className='h-64 w-32 relative '>
                     <Image
-                        src="/projects/garminwatchface/watchface_morning.png"
+                        src="/projects/garminwatchface/Watchface_morning.png"
                         className='rounded'
-                        alt="picture of chris jumping in front of zurich"
+                        alt="Garmin Morning Watch"
                         objectFit='cover'
                         fill={true}
                     />
                     </div>
                     <div className='h-64 w-32 relative '>
                     <Image
-                        src="/projects/garminwatchface/watchface_sunset.png"
+                        src="/projects/garminwatchface/Watchface_sunset.png"
                         className='rounded'
-                        alt="picture of chris jumping in front of zurich"
+                        alt="Garmin Sunset Watch"
                         objectFit='cover'
                         fill={true}
                     />
                     </div>
                     <div className='h-64 w-32 relative '>
                     <Image
-                        src="/projects/garminwatchface/watchface_midnight.png"
+                        src="/projects/garminwatchface/Watchface_midnight.png"
                         className='rounded'
-                        alt="picture of chris jumping in front of zurich"
+                        alt="Garmin Midnight Watch"
                         objectFit='cover'
                         fill={true}
                     />
