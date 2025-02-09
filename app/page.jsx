@@ -31,7 +31,7 @@ export default function Home() {
     const [bgEnabled, setBgEnabled] = useState(false)
 
     return (
-        <main className='max-w-screen-sm'>
+        <main className='max-w-(--breakpoint-sm)'>
             
             { bgEnabled ? <></>:<BackgroundScene/>}
             <ScrollWindow

@@ -20,7 +20,7 @@ export default function DescGarminWatchface(props){
                     <div className='h-64 w-32 relative '>
                     <Image
                         src="/projects/garminwatchface/watchface_intro.png"
-                        className='rounded'
+                        className='rounded-sm'
                         alt="picture of chris jumping in front of zurich"
                         objectFit='cover'
                         fill={true}
@@ -29,7 +29,7 @@ export default function DescGarminWatchface(props){
                     <div className='h-64 w-32 relative '>
                     <Image
                         src="/projects/garminwatchface/watchface_morning.png"
-                        className='rounded'
+                        className='rounded-sm'
                         alt="picture of chris jumping in front of zurich"
                         objectFit='cover'
                         fill={true}
@@ -38,7 +38,7 @@ export default function DescGarminWatchface(props){
                     <div className='h-64 w-32 relative '>
                     <Image
                         src="/projects/garminwatchface/watchface_sunset.png"
-                        className='rounded'
+                        className='rounded-sm'
                         alt="picture of chris jumping in front of zurich"
                         objectFit='cover'
                         fill={true}
@@ -47,7 +47,7 @@ export default function DescGarminWatchface(props){
                     <div className='h-64 w-32 relative '>
                     <Image
                         src="/projects/garminwatchface/watchface_midnight.png"
-                        className='rounded'
+                        className='rounded-sm'
                         alt="picture of chris jumping in front of zurich"
                         objectFit='cover'
                         fill={true}

@@ -1,6 +1,64 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import 'tailwindcss';
+
+/* This doesn't perfectly replace the flat config atm, because I was using the values programmatically*/
+:root {
+    --peach : "#E9D1B7";
+    --morningsky : "#dce6ff";
+    --morningorange : "#ffc87e";
+    --morningsun : "#fffddc";
+    --grass : "#8E7F4A";
+    --blush : "#D65780";
+    --giantsorange : "#FF521B";
+    --cordovan : "#8C4843";
+    --periwinkle :"#DAC4F7";
+}
+
+
+@utility notebook-input {
+  background: rgb(255, 128, 109);
+  background: linear-gradient(
+    144deg,
+    rgba(255, 128, 109, 0.8323530095632002) 35%,
+    rgba(255, 239, 0, 0) 65%
+  );
+  background-size: 200% 100%;
+  background-repeat: no-repeat;
+}
+
+@utility notebook-unfocused {
+  background-position: 150% 0%;
+}
+
+@utility notebook-hover {
+  background-position: 50% 0%;
+}
+
+@utility notebook-focused {
+  background-position: 0% 0%;
+}
+
+@utility project-input {
+  background: rgb(255, 128, 109);
+  background: linear-gradient(
+    234deg,
+    rgba(255, 128, 109, 0.8323530095632002) 35%,
+    rgba(255, 239, 0, 0) 65%
+  );
+  background-size: 200% 100%;
+  background-repeat: no-repeat;
+}
+
+@utility project-unfocused {
+  background-position: -50% 0%;
+}
+
+@utility project-hover {
+  background-position: 50% 0%;
+}
+
+@utility project-focused {
+  background-position: 100% 0%;
+}
 
 @layer base{
     html{
@@ -8,62 +66,32 @@
     }
 }
 
-.background-fade {
-    background: rgb(255,200,126);
-    background: linear-gradient(24deg, rgba(255,200,126,1) 17%, rgba(255,253,220,1) 66%, rgba(220,230,255,1) 92%);
+@layer utilities {
+  .background-fade {
+    background: rgb(255, 200, 126);
+    background: linear-gradient(
+      24deg,
+      rgba(255, 200, 126, 1) 17%,
+      rgba(255, 253, 220, 1) 66%,
+      rgba(220, 230, 255, 1) 92%
+    );
     background-attachment: fixed;
-}
+  }
 
-.fadeout-mask {
-  --mask: linear-gradient(to bottom, 
-      rgba(0,0,0, 1) 0,   rgba(0,0,0, 1) 40%, 
-      rgba(0,0,0, 0) 95%, rgba(0,0,0, 0) 0
-  ) 100% 50% / 100% 100% repeat-x;
-  
-  border: 1px #d8d8d8 dashed;
-  -webkit-mask: var(--mask); 
-  mask: var(--mask);
-}
+  .fadeout-mask {
+    --mask: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 1) 0,
+        rgba(0, 0, 0, 1) 40%,
+        rgba(0, 0, 0, 0) 95%,
+        rgba(0, 0, 0, 0) 0
+      )
+      100% 50% / 100% 100% repeat-x;
 
-
-@variants group-hover, hover, focus {
-    .notebook-input{
-        background: rgb(255,128,109);
-        background: linear-gradient(144deg, rgba(255,128,109,0.8323530095632002) 35%, rgba(255,239,0,0) 65%);
-        background-size: 200% 100%;
-        background-repeat: no-repeat;
-    }
-
-    .notebook-unfocused {
-        background-position: 150% 0%;
-    }
-    
-    .notebook-hover {
-        background-position: 50% 0%;
-    }
-
-    .notebook-focused {
-        background-position: 0% 0%;
-    }
-
-    .project-input{
-        background: rgb(255,128,109);
-        background: linear-gradient(234deg, rgba(255,128,109,0.8323530095632002) 35%, rgba(255,239,0,0) 65%);
-        background-size: 200% 100%;
-        background-repeat: no-repeat;
-    }
-
-    .project-unfocused {
-        background-position: -50% 0%;
-    }
-    
-    .project-hover {
-        background-position: 50% 0%;
-    }
-
-    .project-focused {
-        background-position: 100% 0%;
-    }
+    border: 1px #d8d8d8 dashed;
+    -webkit-mask: var(--mask);
+    mask: var(--mask);
+  }
 }
 
 

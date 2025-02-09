@@ -1,11 +1,6 @@
 
 import { useRef } from 'react'
 
-import resolveConfig from 'tailwindcss/resolveConfig'
-import tailwindConfig from '../../tailwind.config.js'
-
-const fullConfig = resolveConfig(tailwindConfig)
-
 export default function HemisphereLight(props){
     const light = useRef()
 
@@ -14,8 +9,8 @@ export default function HemisphereLight(props){
     return (
         <hemisphereLight 
             {...props}
-            skyColor={fullConfig.theme.colors.morningsky}
-            groundColor={fullConfig.theme.colors.morningsky}
+            skyColor={"#dce6ff"}
+            groundColor={"#dce6ff"}
             intensity={.3}/>
     )
 }

@@ -16,11 +16,7 @@ import HemisphereLight from './HemisphereLight'
 import Sun from './Sun'
 import { MathUtils, PlaneGeometry } from 'three'
 
-import resolveConfig from 'tailwindcss/resolveConfig'
-import tailwindConfig from '../../tailwind.config.js'
-
-const fullConfig = resolveConfig(tailwindConfig)
-
+import '../globals.css'
 
 export default function BackgroundScene(props){
 
@@ -34,7 +30,7 @@ export default function BackgroundScene(props){
                     <Sun position={[-3, 18, -6]} target-position={[0, 0, 0]} />
 
                     <mesh position={[-10, 4, -15]}>
-                      <sphereBufferGeometry args={[.5, 24, 24]} />
+                      <sphereGeometry args={[.5, 24, 24]} />
                       <meshPhysicalMaterial color={[10, 8, 3]} toneMapped={false} />
                     </mesh>
 
@@ -80,7 +76,7 @@ function Objects(props){
     
     return (
         <>
-        <fog ref={fog} attach="fog" color={fullConfig.theme.colors.morningorange} near={0} far={16}/> 
+        <fog ref={fog} attach="fog" color={"#ffc87e"} near={0} far={16}/> 
         <group>
             <SoftShadows 
                 size={52}
@@ -91,7 +87,7 @@ function Objects(props){
             <CityStretch position={[0, 0, -69]}/>
             <mesh position={[0, -2.1, 0]} 
                 rotation={[Math.PI / 2, Math.PI, 0]} scale={[1, 1, 1]}>
-                <planeBufferGeometry args={[200, 400]}/>
+                <planeGeometry args={[200, 400]}/>
                 <meshPhysicalMaterial color={[.8, .8, .8 ]} toneMapped={false} />
             </mesh>
         </group>

@@ -23,7 +23,7 @@ export default function DescAnkiCLI(props){
                     <div className='h-36 w-4/5 md:h-44 md:w-96 relative '>
                     <Image
                         src="/projects/ankitool/ankitool_addingcard.png"
-                        className='rounded'
+                        className='rounded-sm'
                         alt="picture of chris jumping in front of zurich"
                         objectFit='cover'
                         fill={true}
@@ -32,7 +32,7 @@ export default function DescAnkiCLI(props){
                     <div className='h-36 w-4/5 md:h-44 md:w-96 relative '>
                     <Image
                         src="/projects/ankitool/ankitool_finisheddingcards.png"
-                        className='rounded'
+                        className='rounded-sm'
                         alt="picture of chris jumping in front of zurich"
                         objectFit='cover'
                         fill={true}

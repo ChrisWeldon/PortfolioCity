@@ -24,7 +24,7 @@ export default function DescAnkiWebApp(props){
                         md:h-64 md:w-96 relative '>
                     <Image
                         src="/projects/ankiweb/ankiweb_newdeck.png"
-                        className='rounded'
+                        className='rounded-sm'
                         alt="picture of chris jumping in front of zurich"
                         objectFit='cover'
                         fill={true}
@@ -35,7 +35,7 @@ export default function DescAnkiWebApp(props){
                         md:h-64 md:w-96 relative '>
                     <Image
                         src="/projects/ankiweb/ankiweb_addcard.png"
-                        className='rounded'
+                        className='rounded-sm'
                         alt="picture of chris jumping in front of zurich"
                         objectFit='cover'
                         fill={true}
